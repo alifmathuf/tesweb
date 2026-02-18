@@ -170,9 +170,17 @@ nav{
   </div>
 </div>
 
-<!-- MODAL PLAYER -->
-<div class="modal" id="playerModal">
+<<div class="modal" id="playerModal">
   <span class="close" onclick="closePlayer()">✖</span>
+
+  <iframe id="ytplayer"
+    width="80%" height="500"
+    src=""
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+</div>
 
   <!-- GANTI LINK VIDEO DI SINI -->
   <video controls>
@@ -183,10 +191,13 @@ nav{
 <script>
 function openPlayer(){
   document.getElementById("playerModal").style.display="flex";
+  document.getElementById("ytplayer").src =
+    "https://www.youtube.com/embed/jZ9I8klX4MI?autoplay=1";
 }
 
 function closePlayer(){
   document.getElementById("playerModal").style.display="none";
+  document.getElementById("ytplayer").src = "";
 }
 </script>
 
